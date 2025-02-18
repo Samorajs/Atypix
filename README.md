@@ -13,12 +13,12 @@ Atypix is a modern JavaScript framework that offers a **different syntax** compa
 
 ---
 
-## Installation
+## Creating New Project
 
 To use Atypix, install it via npm:
 
 ```bash
-npm install atypix
+npx create-atypix-app my-app
 ```
 
 ---
