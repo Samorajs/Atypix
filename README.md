@@ -15,7 +15,7 @@ Atypix is a modern JavaScript framework that offers a **different syntax** compa
 
 ## Creating New Project
 
-To use Atypix, install it via npm:
+To start a new Project using Atypix, run the following command:
 
 ```bash
 npx create-atypix-app my-app
