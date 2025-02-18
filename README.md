@@ -6,7 +6,7 @@ Atypix is a modern JavaScript framework that offers a **different syntax** compa
 
 - **Function-Based Components**: Write components as functions with a clean, declarative syntax.
 - **State Management**: Built-in `state` for managing component state (similar to React's `useState`).
-- **Side Effects**: Use `useEffect` to handle side effects like data fetching or subscriptions.
+- **Side Effects**: Use `effect` to handle side effects like data fetching or subscriptions.
 - **Form Handling**: Pre-built form components (`Form`, `Field`, `Label`, etc.) for easy form creation.
 - **Data Fetching**: A `Fetcher` utility for making API requests.
 - **Component Library**: Includes reusable components like `View`, `Divider`, `Navs`, `ListItems`, and more.
@@ -30,14 +30,14 @@ npm install atypix
 Here’s a simple example of how to use Atypix to create a component:
 
 ```javascript
-import { state, useEffect } from 'atypix';
+import { state, effect } from 'atypix';
 import { View, Fetcher } from 'atypix/components';
 
 function App() {
   const [data, setData] = state([]);
   const [loading, setLoading] = state(true);
 
-  useEffect(() => {
+  effect(() => {
     Fetcher('https://jsonplaceholder.typicode.com/posts', (response, error) => {
       if (error) {
         console.error('Error fetching data:', error);
@@ -224,14 +224,14 @@ Here’s a quick overview of the components available in Atypix:
 Here’s an example of a simple CRUD application using Atypix:
 
 ```javascript
-import { state, useEffect } from 'atypix';
+import { state, effect } from 'atypix';
 import { View, Form, Field, Fetcher } from 'atypix/components';
 
 function CrudApp() {
   const [items, setItems] = state([]);
   const [newItem, setNewItem] = state('');
 
-  useEffect(() => {
+  effect(() => {
     Fetcher('https://jsonplaceholder.typicode.com/todos', (response, error) => {
       if (error) {
         console.error('Error fetching data:', error);
